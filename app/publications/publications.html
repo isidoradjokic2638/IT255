@@ -1,0 +1,23 @@
+<div class="container1 publications">
+<div clas="col-lg-12">
+</div>
+<div class="col-md-12">
+<h2>Publications</h2><br/>
+      <table class="table table-striped">
+        <tr>
+           <th style="text-align: center"><h3>id</h3></th>
+           <th style="text-align: center"><h3>Name</h3></th>
+           <th style="text-align: center"><h3>Author</h3></th>
+        </tr>
+        <tbody>
+        <ng-container *ngFor="let knjige of data">
+          <tr>
+          <td><h3>{{knjige.id}}</h3></td>
+          <td><button class="klik" (click)="openKnjige(knjige.id)"><h3>{{knjige.name}}</h3></button></td>
+          <td><h3>{{knjige.author}}</h3></td>
+          </tr>
+        </ng-container>
+        </tbody>
+      </table>
+</div>
+</div>

@@ -1,0 +1,22 @@
+<div class="container1 category">
+
+<div clas="col-lg-12">
+</div>
+<div class="col-md-12">
+{{data?.type}}
+      <table class="table table-striped">
+        <tr>
+           <th style="text-align: center"><h3>id</h3></th>
+           <th style="text-align: center"><h3>Name</h3></th>
+           <th style="text-align: center"><h3>Author</h3></th>
+        </tr>
+        <tbody>
+          <tr (click)="openKnjige(data?.id)">
+          <td><h3>{{data?.id}}</h3></td>
+          <td><button class="klik" ><h3>{{data?.name}}</h3></button></td>
+          <td><h3>{{data?.author}}</h3></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+</div>

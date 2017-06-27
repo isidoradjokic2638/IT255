@@ -1,0 +1,22 @@
+<div class="container1">
+<form class="formal" role="form" [formGroup]="addBookForm" ng-app="myApp" ng-controller="validateCtrl"  novalidate>
+	<div class="form-group">
+				<input type="text" name="name" placeholder="name" class="form-control" formControlName='name' >
+	</div>
+	<div class="form-group">
+				<input type="text" name="author" placeholder="author" class="form-control" formControlName='author'>
+		</div>
+		<div class="form-group">
+				<input type="text" name="price" placeholder="price" class="form-control" formControlName='price'>
+		</div>
+		<div class="form-group">
+				<input type="text" name="about" placeholder="about" class="form-control" formControlName='about'>
+		</div>
+		<div class="form-group">
+				<input type="text" name="type" placeholder="type" class="form-control" formControlName='type'>
+		</div>
+
+        <button (click)="onAddBook()" class="button"><h2>Add book</h2></button>
+       
+</form>
+</div>

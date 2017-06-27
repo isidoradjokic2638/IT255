@@ -1,0 +1,33 @@
+<div class="img-background"></div>
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<!-- Brand and toggle get grouped for better mobile display -->
+
+
+</div>
+
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<ul class="nav navbar-nav">
+		<li routerLink="/home" routerLinkActive="active"><a routerLink="/home"><h5>OL</h5></a></li>
+		<ng-container *ngIf = "isAuth =='yes'" >
+			<li *ngIf = "isAdmin =='yes'" routerLink="/editBook" routerLinkActive="active"><a routerLink="/editBook"><h2>edit book</h2></a></li>
+			<li *ngIf = "isAdmin =='yes'" routerLink="/addBook" routerLinkActive="active"><a routerLink="/addBook"><h2>add book</h2></a></li>
+		</ng-container>
+
+		<li *ngIf = "isAuth =='no'" routerLink="/login" routerLinkActive="active" class="dugmeClass"><a routerLink="/login"><h2>login</h2></a></li>
+		<li *ngIf="isAuth == 'yes'" class="dugmeClass"><a (click)="onLogout()"><h2>
+		{{user?.first}}- logout</h2></a></li>
+
+		<ng-container *ngIf="isAdmin =='no'">
+			<li *ngIf = "isAuth =='yes'" routerLink="/publications" routerLinkActive="active"><a routerLink="/publications"><h2>publications</h2></a></li>
+			<li  *ngIf = "isAuth =='yes'" routerLink="/browse" routerLinkactive="active"><a routerLink="browse"><h2>browse by category</h2></a></li>
+			<li  *ngIf = "isAuth =='yes'" routerLink="/basket" routerLinkActive="active" class="dugmeClass"><a routerLink="/basket"><img src="images/basket.png" height=20px></a></li>
+		</ng-container>
+		<li routerLink="/about" routerLinkActive="active"><a routerLink="/about"><h2>about</h2></a></li>
+	</ul>	
+</div>
+</nav>
+<div class="container">
+<router-outlet></router-outlet>
+<div class="triangle" style="border-bottom-width:630px; border-left:700px solid transparent;">
+</div>

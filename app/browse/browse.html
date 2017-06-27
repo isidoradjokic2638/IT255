@@ -1,0 +1,6 @@
+<div class="container1 browse">
+<h2 align="left">Browse by category</h2><br/>
+	<ng-container *ngFor="let knjige of data">
+          <button class="klik" (click)="category(knjige.type)"><h4>- {{knjige.type}}</h4></button><br/>
+    </ng-container>
+</div>

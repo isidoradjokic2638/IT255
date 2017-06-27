@@ -1,0 +1,14 @@
+<div id="content" class="container" style="width: 430px">
+    <div class="container1 login">
+        <form role="form" [formGroup]="loginForm" class="formal">
+            <input type="text" formControlName='username' placeholder="Username"/>
+            <br>
+            <br>
+            <input type="password" formControlName='password' placeholder="Password"/>
+            <br>
+            <br>
+            <button (click)="login()" class="button"><h2>Login</h2></button><br/>
+            <a routerLink="/register"><h4>If you dont have account click here</h4></a>
+        </form>
+    </div>
+</div>

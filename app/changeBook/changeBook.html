@@ -1,0 +1,26 @@
+<form class="formal" role="form" [formGroup]="changeBookForm">
+<div class="container1">
+<div class="form-group">
+<label for="name"><h3>Name</h3></label>
+<input type="text" class="form-control" formControlName='name'>
+</div>
+<div class="form-group">
+<label for="author"><h3>Author:</h3></label>
+<input type="text" class="form-control" formControlName='author'>
+</div>
+<div class="form-group">
+<label for="price"><h3>Price:</h3></label>
+<input type="text" class="form-control" formControlName='price'>
+</div>
+<div class="form-group">
+<label for="about"><h3>About:</h3></label>
+<input type="text" class="form-control" formControlName='about'>
+</div>
+<div class="form-group">
+<label for="type"><h3>Type:</h3></label>
+<input type="text" class="form-control" formControlName='type'>
+</div><br/>
+
+<button (click)="changeBook()" class="button"><h2>Change book</h2></button>
+</div>
+</form>
